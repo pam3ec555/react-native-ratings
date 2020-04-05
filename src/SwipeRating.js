@@ -46,7 +46,8 @@ export default class SwipeRating extends Component {
     ratingCount: 5,
     showReadOnlyText: true,
     imageSize: 40,
-    minValue: 0
+    minValue: 0,
+    containerStyle: {},
   };
 
   constructor(props) {
@@ -157,7 +158,7 @@ export default class SwipeRating extends Component {
     const source = TYPES[type].source;
 
     return times(ratingCount, index => (
-      <View key={index} style={styles.starContainer}>
+      <View key={index} style={[styles.starContainer, this.props.containerStyle]}>
         <Image source={source} style={{ width: imageSize, height: imageSize, tintColor }} />
       </View>
     ));
@@ -343,5 +344,6 @@ SwipeRating.propTypes = {
   showReadOnlyText: PropTypes.bool,
   startingValue: PropTypes.number,
   fractions: fractionsType,
-  minValue: PropTypes.number
+  minValue: PropTypes.number,
+  containerStyle: ViewPropTypes.style,
 };
