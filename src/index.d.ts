@@ -66,6 +66,11 @@ export interface RatingProps {
   style?: typeof ViewPropTypes.style;
 
   /**
+   * Exposes style prop to add additonal styling to the container view
+   */
+  containerStyle?: typeof ViewPropTypes.style;
+
+  /**
    * Whether the rating can be modiefied by the user
    *
    * Default is false

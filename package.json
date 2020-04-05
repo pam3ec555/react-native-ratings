@@ -1,6 +1,6 @@
 {
-  "name": "react-native-ratings",
-  "version": "6.5.0",
+  "name": "@pam3ec555/react-native-ratings",
+  "version": "6.5.1",
   "description": "The standard Ratings component for React Native",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
